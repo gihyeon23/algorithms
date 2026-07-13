@@ -6,8 +6,6 @@ class Solution {
             for(int j = 0; j < n; j++) {
                 if(i == j) {
                     answer[i][j] = 1;
-                } else {
-                    answer[i][j] = 0;
                 }
             }
         }
