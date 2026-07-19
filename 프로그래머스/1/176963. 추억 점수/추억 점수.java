@@ -8,10 +8,8 @@ class Solution {
         for(int i = 0; i < name.length; i++) {map.put(name[i], yearning[i]); }
         
         for(int i = 0; i < photo.length; i++) {
-            for(int j = 0; j < photo[i].length; j++) {
-                if(map.get(photo[i][j]) != null) {
-                    answer[i] += map.get(photo[i][j]);
-                }
+            for(int j = 0; j < photo[i].length; j++) { 
+                    answer[i] += map.getOrDefault(photo[i][j],0);
 
             }
         }
