@@ -14,19 +14,13 @@ class Solution {
         for(int i : topping) {
             b2.put(i, b2.getOrDefault(i,0) + 1);
             
-            if(b1.get(i) == 1) {
-                System.out.println(b1.get(i));
-                b1.remove(i);
-            } else {
-                b1.put(i, b1.get(i) - 1);
-            }
+            b1.put(i, b1.get(i) - 1);
+            if(b1.get(i) == 0) b1.remove(i);
             
             if(b1.size() == b2.size()) {
                 answer++;
             }
         }
-        
-        System.out.print(b1);
         
         return answer;
     }
