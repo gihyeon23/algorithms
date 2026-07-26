@@ -7,7 +7,8 @@ class Solution {
             public int compare(String a, String b) {
                 if (a.charAt(n) != b.charAt(n))
                     return a.charAt(n) - b.charAt(n);  // n번째 글자 비교
-                return a.compareTo(b);                  // 같으면 사전순
+                    //a(문자) - b(문자)숫자가 양수이면 b가 앞으로(작으니까)
+                return a.compareTo(b); // 같으면 사전순
             }
         });
         return strings;
