@@ -32,12 +32,12 @@ class Solution {
         
         for(int i = 0; i < board.length; i++) {
             for(int j = 0; j < board[i].length; j++) {
-                if(board[i][j] == 2) {
+                if(board[i][j] == 0) {
                     answer++;
                 }
             }
         }
         
-        return (safe_zone - answer);
+        return (answer);
     }
 }
